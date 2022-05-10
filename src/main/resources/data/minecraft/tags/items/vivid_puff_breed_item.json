@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:apple",
+    "minecraft:pumpkin_pie",
+    "minecraft:sugar",
+    "minecraft:cooked_cod",
+    "minecraft:cooked_salmon",
+    "minecraft:golden_apple",
+    "minecraft:cake",
+    "minecraft:bread",
+    "minecraft:potion",
+    "minecraft:baked_potato",
+    "minecraft:melon_slice",
+    "minecraft:golden_carrot",
+    "minecraft:dried_kelp",
+    "minecraft:sweet_berries",
+    "minecraft:milk_bucket",
+    "minecraft:water_bucket",
+    "colorfulpuff:caramel_candy_block",
+    "colorfulpuff:aqua_candy_block",
+    "colorfulpuff:lime_candy_block",
+    "colorfulpuff:ice_candy_block",
+    "colorfulpuff:orange_candy_block",
+    "colorfulpuff:pink_candy_block",
+    "colorfulpuff:red_candy_block",
+    "colorfulpuff:yellow_candy_block",
+    "colorfulpuff:sugar_block",
+    "colorfulpuff:gold_cookie_block",
+    "colorfulpuff:mint_cookie_block",
+    "colorfulpuff:rose_cookie_block"
+  ]
+}
