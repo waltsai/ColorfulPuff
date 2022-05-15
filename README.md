@@ -18,7 +18,7 @@
 * Minecraft版本: 1.18.2
 * Fabric Loader版本: >=0.11.3
 * 有Fabric API模組需求
-* 支援ClothConfig (>=5.0.0) 與ModMenu (>=2.0.0)
+* 支援[ClothConfig](https://www.curseforge.com/minecraft/mc-mods/cloth-config) (>=5.0.0) 與[ModMenu](https://www.curseforge.com/minecraft/mc-mods/modmenu) (>=2.0.0)
 
 ## 社群
 
