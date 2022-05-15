@@ -121,7 +121,7 @@ public class ModProvider {
     public static final Block YELLOW_CANDY_BLOCK = new Block(candy());
     public static final Block SUGAR_BLOCK = new Block(candy());
     public static final Block GOLD_COOKIE_BLOCK = new Block(cookie());
-    public static final Block MINT_COOKIE_BLOCK = new Block(cookie());
+    public static final Block MATCHA_COOKIE_BLOCK = new Block(cookie());
     public static final Block ROSE_COOKIE_BLOCK = new Block(cookie());
 
     public static final Block NUIGURUMI_BOX_BLOCK = new Block(AbstractBlock.Settings.of(Material.WOOD, MapColor.WHITE).strength(1.0f, 2.0f).luminance((state) -> 3));
@@ -151,7 +151,7 @@ public class ModProvider {
         Registry.register(Registry.BLOCK, Utils.identifier("yellow_candy_block"), YELLOW_CANDY_BLOCK);
         Registry.register(Registry.BLOCK, Utils.identifier("sugar_block"), SUGAR_BLOCK);
         Registry.register(Registry.BLOCK, Utils.identifier("gold_cookie_block"), GOLD_COOKIE_BLOCK);
-        Registry.register(Registry.BLOCK, Utils.identifier("mint_cookie_block"), MINT_COOKIE_BLOCK);
+        Registry.register(Registry.BLOCK, Utils.identifier("matcha_cookie_block"), MATCHA_COOKIE_BLOCK);
         Registry.register(Registry.BLOCK, Utils.identifier("rose_cookie_block"), ROSE_COOKIE_BLOCK);
         Registry.register(Registry.BLOCK, Utils.identifier("nuigurumi_box"), NUIGURUMI_BOX_BLOCK);
         Registry.register(Registry.ITEM, Utils.identifier("caramel_candy_block"), new BlockItem(CARAMEL_CANDY_BLOCK, new Item.Settings()));
@@ -164,7 +164,7 @@ public class ModProvider {
         Registry.register(Registry.ITEM, Utils.identifier("yellow_candy_block"), new BlockItem(YELLOW_CANDY_BLOCK, new Item.Settings()));
         Registry.register(Registry.ITEM, Utils.identifier("sugar_block"), new BlockItem(SUGAR_BLOCK, new Item.Settings()));
         Registry.register(Registry.ITEM, Utils.identifier("gold_cookie_block"), new BlockItem(GOLD_COOKIE_BLOCK, new Item.Settings()));
-        Registry.register(Registry.ITEM, Utils.identifier("mint_cookie_block"), new BlockItem(MINT_COOKIE_BLOCK, new Item.Settings()));
+        Registry.register(Registry.ITEM, Utils.identifier("matcha_cookie_block"), new BlockItem(MATCHA_COOKIE_BLOCK, new Item.Settings()));
         Registry.register(Registry.ITEM, Utils.identifier("rose_cookie_block"), new BlockItem(ROSE_COOKIE_BLOCK, new Item.Settings()));
         Registry.register(Registry.ITEM, Utils.identifier("nuigurumi_box"), new BlockItem(NUIGURUMI_BOX_BLOCK, new Item.Settings()));
         Registry.register(Registry.ITEM, Utils.identifier("dyestuff_both_blue"), DYESTUFF_BOTH_BLUE);
@@ -193,7 +193,7 @@ public class ModProvider {
     }
 
     public static void initialize() {
-        FabricItemGroupBuilder.create(Utils.identifier("mod_item")).icon(() -> new ItemStack(PUFF_SPAWN_EGG))
+        FabricItemGroupBuilder.create(Utils.identifier("puff")).icon(() -> new ItemStack(PUFF_SPAWN_EGG))
                 .appendItems(stacks -> {
                     stacks.add(new ItemStack(PUFF_SPAWN_EGG));
                     stacks.add(new ItemStack(MINI_PUFF_SPAWN_EGG));
@@ -207,7 +207,7 @@ public class ModProvider {
                     stacks.add(new ItemStack(YELLOW_CANDY_BLOCK));
                     stacks.add(new ItemStack(SUGAR_BLOCK));
                     stacks.add(new ItemStack(GOLD_COOKIE_BLOCK));
-                    stacks.add(new ItemStack(MINT_COOKIE_BLOCK));
+                    stacks.add(new ItemStack(MATCHA_COOKIE_BLOCK));
                 }).build();
         FabricItemGroupBuilder.create(Utils.identifier("puff_doll")).icon(() -> new ItemStack(DYESTUFF_BOTH_BLUE))
                 .appendItems(stacks -> {

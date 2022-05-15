@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "colorfulpuff:mint_cookie_block"
+          "name": "colorfulpuff:matcha_cookie_block"
         }
       ],
       "conditions": [
