@@ -35,7 +35,7 @@ public abstract class PuffEyeFeatureRenderer<T extends AbstractPuffEntity, M ext
     public abstract Identifier getEyeTexture(T entity);
 
     public Identifier getEyebrowTexture() {
-        return Utils.identifier("textures/entity/original/eye/eyebrow.png");
+        return Utils.identifier("textures/entity/puff/eyes/eyebrow.png");
     }
 
     @Override

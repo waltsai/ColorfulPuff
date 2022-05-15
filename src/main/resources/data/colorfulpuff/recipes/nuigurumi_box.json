@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PSP",
+    "WAW",
+    "PSP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "W": {
+      "tag": "eeminecraft:wool"
+    },
+    "A": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "colorfulpuff:nuigurumi_box",
+    "count": 1
+  }
+}

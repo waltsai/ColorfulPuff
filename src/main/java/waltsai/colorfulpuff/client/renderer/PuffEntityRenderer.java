@@ -21,7 +21,7 @@ public class PuffEntityRenderer extends AbstractPuffEntityRenderer<PuffEntity> {
         this.addFeature(new PuffEyeFeatureRenderer<>(this) {
             @Override
             public Identifier getEyeTexture(PuffEntity entity) {
-                return Utils.identifier( "textures/entity/original/eyes/" + entity.getEyeType().name().toLowerCase() + ".png");
+                return Utils.identifier( "textures/entity/puff/eyes/" + entity.getEyeType().getName().toLowerCase() + ".png");
             }
         });
     }
@@ -36,7 +36,7 @@ public class PuffEntityRenderer extends AbstractPuffEntityRenderer<PuffEntity> {
 
     @Override
     public String getTextureLocation(PuffEntity entity) {
-        return "textures/entity/original/cloth/" + entity.getClothType().name().toLowerCase() + ".png";
+        return "textures/entity/puff/cloth/" + entity.getClothType().name().toLowerCase() + ".png";
     }
 
     private <T extends AbstractPuffEntity> BipedEntityModel<T> getModel(ModelPart part) {

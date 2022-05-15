@@ -15,7 +15,10 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import waltsai.colorfulpuff.config.ClothConfigBridge;
+import waltsai.colorfulpuff.server.entity.PuffDollEntity;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.ObjectInputFilter;
 
 public class Utils implements ModInitializer {

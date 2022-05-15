@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "SCS",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:wool"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "C": {
+      "item": "minecraft:cake"
+    }
+  },
+  "result": {
+    "item": "colorfulpuff:puff_doll",
+    "count": 1
+  }
+}

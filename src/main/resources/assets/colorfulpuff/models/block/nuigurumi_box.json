@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "colorfulpuff:block/nuigurumi_box_top",
+    "side": "colorfulpuff:block/nuigurumi_box_side"
+  }
+}

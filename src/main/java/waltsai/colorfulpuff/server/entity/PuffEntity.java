@@ -372,12 +372,15 @@ public class PuffEntity extends AbstractPuffEntity {
     @Override
     public void handleStatus(byte status) {
         super.handleStatus(status);
-        if ((status > 60 && status < 77) || status == 78) {
+        if ((status > 60 && status < 77) ||(status > 77 && status <= 80)) {
             float alpha = this.getRandom().nextFloat() * 0.25F + 0.75F;
             this.produceParticles(new DustParticleEffect(new Vec3f(Vec3d.unpackRgb(ClothType.byId(status - 61).getColorCode())), alpha), 8);
         }
         if (status == 77) {
             this.produceParticles(ParticleTypes.CLOUD, 8);
+        }
+        if (status == 81) {
+            this.produceParticles(ParticleTypes.HAPPY_VILLAGER, 12);
         }
         if (status == 14) {
             this.produceParticles(ParticleTypes.HAPPY_VILLAGER, 5);
@@ -562,8 +565,9 @@ public class PuffEntity extends AbstractPuffEntity {
         BLACK(15, "black", 1908001, Items.BLACK_DYE),
         UNDYED(16, "undyed", -1, Items.POTION),
         HONEY(17, "honey", 13408512, Items.HONEY_BOTTLE),
-        NECTAR(18, "nectar", -1, null),
-        CAREMAL(19, "caramel", -1, null),
+
+        NECTAR(18, "nectar", 16764281, null),
+        CAREMAL(19, "caramel", 10243339, null),
         MIFU(20, "mifu", -1, null);
 
 
@@ -665,17 +669,17 @@ public class PuffEntity extends AbstractPuffEntity {
     }
 
     public enum EyeType {
-        EYE1(0, "eye1"),
-        EYE2(1, "eye2"),
-        EYE3(2, "eye3"),
-        EYE4(3, "eye4"),
-        EYE5(4, "eye5"),
-        EYE6(5, "eye6"),
-        EYE7(6, "eye7"),
-        EYE8(7, "eye8"),
-        EYE9(8, "eye9"),
-        EYE10(9, "eye10"),
-        EYE11(10, "eye11");
+        EYE1(0, "both_blue"),
+        EYE2(1, "both_chetwode"),
+        EYE3(2, "both_green"),
+        EYE4(3, "both_lavender"),
+        EYE5(4, "blue_chetwode"),
+        EYE6(5, "blue_dark"),
+        EYE7(6, "blue_yellow"),
+        EYE8(7, "both_downy"),
+        EYE9(8, "both_rose"),
+        EYE10(9, "both_puce"),
+        EYE11(10, "both_purple");
 
 
         private final int id;
