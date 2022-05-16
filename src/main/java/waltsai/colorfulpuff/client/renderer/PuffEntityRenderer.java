@@ -21,6 +21,9 @@ public class PuffEntityRenderer extends AbstractPuffEntityRenderer<PuffEntity> {
         this.addFeature(new PuffEyeFeatureRenderer<>(this) {
             @Override
             public Identifier getEyeTexture(PuffEntity entity) {
+                if (entity.getClothType() == PuffEntity.ClothType.MIFU) {
+                    return Utils.identifier( "textures/entity/puff/eyes/mifu.png");
+                }
                 return Utils.identifier( "textures/entity/puff/eyes/" + entity.getEyeType().getName().toLowerCase() + ".png");
             }
         });

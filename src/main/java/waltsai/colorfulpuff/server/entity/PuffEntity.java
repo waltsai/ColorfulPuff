@@ -29,6 +29,7 @@ import net.minecraft.potion.PotionUtil;
 import net.minecraft.server.network.DebugInfoSender;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.tag.TagKey;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
@@ -39,6 +40,10 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import waltsai.colorfulpuff.ModProvider;
 
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.UUID;
@@ -339,6 +344,18 @@ public class PuffEntity extends AbstractPuffEntity {
     }
 
     @Override
+    public void setCustomName(@Nullable Text name) {
+        super.setCustomName(name);
+        if (this.hasCustomName()) {
+            if (name.getString().equals("実芙") && this.getClothType() != ClothType.MIFU) {
+                this.setClothType(ClothType.MIFU);
+            } else if (name.getString().equals("Xmas") && this.getClothType() != ClothType.XMAS) {
+                this.setClothType(ClothType.XMAS);
+            }
+        }
+    }
+
+    @Override
     public void tick() {
         super.tick();
     }
@@ -568,7 +585,8 @@ public class PuffEntity extends AbstractPuffEntity {
 
         NECTAR(18, "nectar", 16764281, null),
         CAREMAL(19, "caramel", 10243339, null),
-        MIFU(20, "mifu", -1, null);
+        MIFU(20, "mifu", -1, null),
+        XMAS(21, "xmas", -1, null);
 
 
         private final int id;
@@ -601,9 +619,9 @@ public class PuffEntity extends AbstractPuffEntity {
         }
 
         public static ClothType byId(int id) {
-            for(int i = 0; i <= 20; i++) {
-                if(values()[i].getId() == id) {
-                    return values()[i];
+            for(ClothType type : values()) {
+                if(type.getId() == id) {
+                    return type;
                 }
             }
             return null;
@@ -630,6 +648,11 @@ public class PuffEntity extends AbstractPuffEntity {
         public static ClothType createRandom(Random random) {
             int i = random.nextInt(66);
 
+            if (LocalDateTime.now().toLocalDate().getMonth() == Month.DECEMBER && LocalDateTime.now().toLocalDate().getDayOfMonth() == 25) {
+                if (i < 14) {
+                    return ClothType.XMAS;
+                }
+            }
             if(i < 9) {
                 return ClothType.ORANGE;
             } else if(i < 14) {

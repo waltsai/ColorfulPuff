@@ -38,6 +38,7 @@
   "item.colorfulpuff.dyestuff_roseus": "Dyestuff Roseus Special",
   "item.colorfulpuff.dyestuff_wither": "Dyestuff Both Wither Rose",
   "item.colorfulpuff.dyestuff_zombified": "Dyestuff Zombified",
+  "item.colorfulpuff.dyestuff_mifu": "Dyestuff Mifu",
   "itemtooltip.colorfulpuff.puff_doll.title": "Puff Doll Data:",
   "itemGroup.colorfulpuff.puff": "Puff",
   "itemGroup.colorfulpuff.puff_doll": "Puff Doll",
@@ -69,6 +70,7 @@
   "cloth.colorfulpuff.puff_doll.zombified": "[Zombified]",
   "cloth.colorfulpuff.puff_doll.title": "Cloth:",
   "eyes.colorfulpuff.puff_doll.title": "Eyes:",
+  "eyes.colorfulpuff.puff_doll.both": "Both",
   "eyes.colorfulpuff.puff_doll.light_blue": "Light Blue",
   "eyes.colorfulpuff.puff_doll.chetwode": "Chetwode Blue",
   "eyes.colorfulpuff.puff_doll.green": "Light Green",
@@ -82,5 +84,6 @@
   "eyes.colorfulpuff.puff_doll.shrivel_jasmin": "Shrivel Jasmine",
   "eyes.colorfulpuff.puff_doll.roseus_special": "Dark Rose",
   "eyes.colorfulpuff.puff_doll.wither": "Wither Rose",
-  "eyes.colorfulpuff.puff_doll.zombified": "Zombified"
+  "eyes.colorfulpuff.puff_doll.zombified": "Zombified",
+  "eyes.colorfulpuff.puff_doll.mifu": "Mifu"
 }

@@ -42,7 +42,7 @@ import waltsai.colorfulpuff.server.entity.ai.brain.sensor.NearestPuffDangerousLi
 import waltsai.colorfulpuff.server.entity.ai.brain.sensor.PuffSpecificSensor;
 import waltsai.colorfulpuff.mixin.MemoryModuleTypeInvoker;
 import waltsai.colorfulpuff.mixin.SensorTypeInvoker;
-import waltsai.colorfulpuff.server.entity.item.PuffDollItem;
+import waltsai.colorfulpuff.server.item.PuffDollItem;
 
 import java.util.List;
 
@@ -101,6 +101,7 @@ public class ModProvider {
     public static final Item DYESTUFF_ROSEUS = new Item(new Item.Settings().maxCount(16));
     public static final Item DYESTUFF_WITHER = new Item(new Item.Settings().maxCount(16));
     public static final Item DYESTUFF_ZOMBIFIED = new Item(new Item.Settings().maxCount(16));
+    public static final Item DYESTUFF_MIFU = new Item(new Item.Settings().maxCount(16));
 
 
     public static final Material PASTRY = new Material.Builder(MapColor.CLEAR).allowsMovement().build();
@@ -182,6 +183,7 @@ public class ModProvider {
         Registry.register(Registry.ITEM, Utils.identifier("dyestuff_wither"), DYESTUFF_WITHER);
         Registry.register(Registry.ITEM, Utils.identifier("dyestuff_roseus"), DYESTUFF_ROSEUS);
         Registry.register(Registry.ITEM, Utils.identifier("dyestuff_zombified"), DYESTUFF_ZOMBIFIED);
+        Registry.register(Registry.ITEM, Utils.identifier("dyestuff_mifu"), DYESTUFF_MIFU);
     }
 
     public static void registerClient() {
@@ -227,6 +229,7 @@ public class ModProvider {
                     stacks.add(new ItemStack(DYESTUFF_ROSEUS));
                     stacks.add(new ItemStack(DYESTUFF_WITHER));
                     stacks.add(new ItemStack(DYESTUFF_ZOMBIFIED));
+                    stacks.add(new ItemStack(DYESTUFF_MIFU));
                 }).build();
         FabricDefaultAttributeRegistry.register(PUFF_ENTITY, PuffEntity.createPuffAttributes());
     }

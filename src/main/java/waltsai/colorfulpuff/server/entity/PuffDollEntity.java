@@ -210,7 +210,7 @@ public class PuffDollEntity extends Entity {
             this.produceParticles(ParticleTypes.LARGE_SMOKE, 6);
         }
 
-        if (status >= 0 && status < 15) {
+        if (status >= 0 && status < EyeType.values().length) {
             float alpha = this.random.nextFloat() * 0.25F + 0.75F;
             for (EyesStyle color : EyeType.byId(status).getParticles()) {
                 this.produceDyestuffParticles(new DustParticleEffect(new Vec3f(Vec3d.unpackRgb(color.style().getColor().getRgb())), alpha), EyeType.byId(status).getParticles().size() > 1 ? 4 : 8);
@@ -344,7 +344,8 @@ public class PuffDollEntity extends Entity {
         BOTH_JASMINE(11, "both_jasmine", sameColorEye(EyesStyle.SHRIVEL_JASMINE), ModProvider.DYESTUFF_BOTH_JASMINE, EyesStyle.SHRIVEL_JASMINE),
         ROSEUS(12, "roseus_special", combinedEye(EyesStyle.ROSE, EyesStyle.ROSEUS_SPECIAL), ModProvider.DYESTUFF_ROSEUS, EyesStyle.ROSE, EyesStyle.ROSEUS_SPECIAL),
         WITHER(13, "wither", sameColorEye(EyesStyle.WITHER), ModProvider.DYESTUFF_WITHER, EyesStyle.WITHER),
-        ZOMBIFIED(14, "zombified", sameColorEye(EyesStyle.ZOMBIFIED), ModProvider.DYESTUFF_ZOMBIFIED, EyesStyle.ZOMBIFIED);
+        ZOMBIFIED(14, "zombified", sameColorEye(EyesStyle.ZOMBIFIED), ModProvider.DYESTUFF_ZOMBIFIED, EyesStyle.ZOMBIFIED),
+        MIFU(15, "mifu", sameColorEye(EyesStyle.MIFU), ModProvider.DYESTUFF_MIFU, EyesStyle.MIFU);
 
 
         private final int id;
@@ -400,11 +401,11 @@ public class PuffDollEntity extends Entity {
         }
 
         private static Text sameColorEye(EyesStyle style) {
-            return new LiteralText("[").setStyle(Style.EMPTY).append(new TranslatableText("eyes.colorfulpuff.puff_doll.title").append(" ").append(new LiteralText("Both ").append(new TranslatableText("eyes.colorfulpuff.puff_doll." + style.name().toLowerCase()).setStyle(style.style())))).append(new LiteralText("]").setStyle(Style.EMPTY));
+            return new TranslatableText("eyes.colorfulpuff.puff_doll.title").append(" [").append(new TranslatableText("eyes.colorfulpuff.puff_doll.both").append(" ").append(new TranslatableText("eyes.colorfulpuff.puff_doll." + style.name().toLowerCase()).setStyle(style.style()))).append(new LiteralText("]").setStyle(Style.EMPTY));
         }
 
         private static Text combinedEye(EyesStyle style1, EyesStyle style2) {
-            return new LiteralText("[").setStyle(Style.EMPTY).append(new TranslatableText("eyes.colorfulpuff.puff_doll.title").append(" ").append(new TranslatableText("eyes.colorfulpuff.puff_doll." + style1.name().toLowerCase()).setStyle(style1.style())).append(new LiteralText(" & ").setStyle(Style.EMPTY)).append(new TranslatableText("eyes.colorfulpuff.puff_doll." + style2.name().toLowerCase()).setStyle(style2.style()))).append(new LiteralText("]").setStyle(Style.EMPTY));
+            return new TranslatableText("eyes.colorfulpuff.puff_doll.title").append(" [").append(new TranslatableText("eyes.colorfulpuff.puff_doll." + style1.name().toLowerCase()).setStyle(style1.style())).append(new LiteralText(" & ").setStyle(Style.EMPTY)).append(new TranslatableText("eyes.colorfulpuff.puff_doll." + style2.name().toLowerCase()).setStyle(style2.style())).append(new LiteralText("]").setStyle(Style.EMPTY));
         }
     }
 }

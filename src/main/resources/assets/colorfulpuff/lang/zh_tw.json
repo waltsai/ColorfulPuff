@@ -53,6 +53,7 @@
   "cloth.colorfulpuff.puff_doll.zombified": "[殭屍化]",
   "cloth.colorfulpuff.puff_doll.title": "服飾:",
   "eyes.colorfulpuff.puff_doll.title": "眼睛:",
+  "eyes.colorfulpuff.puff_doll.both": "雙眼",
   "eyes.colorfulpuff.puff_doll.light_blue": "淡藍",
   "eyes.colorfulpuff.puff_doll.chetwode": "岩藍",
   "eyes.colorfulpuff.puff_doll.green": "深綠",
@@ -82,5 +83,7 @@
   "item.colorfulpuff.dyestuff_roseus": "染劑 (玫瑰 & 黑玫瑰)",
   "item.colorfulpuff.dyestuff_wither": "染劑 (雙眼 凋零玫瑰)",
   "item.colorfulpuff.dyestuff_zombified": "染劑 (雙眼 殭屍化)",
-  "block.colorfulpuff.nuigurumi_box": "玩偶盒"
+  "block.colorfulpuff.nuigurumi_box": "玩偶盒",
+  "item.colorfulpuff.dyestuff_mifu": "染劑 (雙眼 実芙)",
+  "eyes.colorfulpuff.puff_doll.mifu": "実芙專屬"
 }

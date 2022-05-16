@@ -18,7 +18,8 @@ public enum EyesStyle {
     SHRIVEL_JASMINE(14209698),
     ROSEUS_SPECIAL(7227486),
     WITHER(6569552),
-    ZOMBIFIED(5988975);
+    ZOMBIFIED(5988975),
+    MIFU(6124166);
     private Style style;
     EyesStyle(int rgb) {
         this.style = plain(rgb);
